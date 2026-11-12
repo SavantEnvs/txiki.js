@@ -1,0 +1,12 @@
+project: savantenvs/txiki.js
+target: fuzz_text
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_text/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_text
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_text/fuzz_text.dict
+    timeout: 30
+    env:
+      MFUZZ_COMPAT_LEVEL: '2'

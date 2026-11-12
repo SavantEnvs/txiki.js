@@ -1,0 +1,12 @@
+project: savantenvs/txiki.js
+target: fuzz_inflate
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_inflate/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_inflate
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_inflate/fuzz_inflate.dict
+    timeout: 30
+    env:
+      MFUZZ_COMPAT_LEVEL: '2'

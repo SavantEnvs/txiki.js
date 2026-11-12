@@ -1,0 +1,1 @@
+import("x"); export default 1; new.target; import.meta; using x = y; await using z = w;

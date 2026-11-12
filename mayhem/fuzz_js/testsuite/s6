@@ -1,0 +1,1 @@
+"use strict"; try { throw 1 } catch { } finally { } switch (x) { case 1: default: } with (a) {}

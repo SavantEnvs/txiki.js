@@ -1,0 +1,12 @@
+project: savantenvs/txiki.js
+target: fuzz_webcrypto
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_webcrypto/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_webcrypto
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_webcrypto/fuzz_webcrypto.dict
+    timeout: 30
+    env:
+      MFUZZ_COMPAT_LEVEL: '2'

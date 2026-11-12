@@ -1,0 +1,1 @@
+var a = 1 + 2; function f(x) { return x * a; } class C { #p = 1; static s = 2; get p() { return this.#p; } }

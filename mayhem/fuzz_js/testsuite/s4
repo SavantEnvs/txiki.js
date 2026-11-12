@@ -1,0 +1,1 @@
+const {a, ...rest} = obj; let [x = 1, , ...ys] = arr; `t${a}${`n${x}`}`; a?.b?.[c]?.(d) ?? e ** 2
